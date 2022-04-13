@@ -64,7 +64,10 @@ const Menu = memo(({ route }) => {
       //   navigation.navigate(ROUTES.MainPage);
       //   setIndex(0);
       //   break;
-
+      case 'Report':
+        navigation.navigate(ROUTES.Report);
+        setIndex(0);
+        break;
       case 'Transaction History':
         navigation.navigate(ROUTES.TransactionHistory);
         setIndex(1);

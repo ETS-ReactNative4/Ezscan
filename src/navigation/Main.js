@@ -73,6 +73,7 @@ import TransactionHistory from '@screens/Transaction/TransactionHistory';
 import PrivacyPolicy from '@screens/Introducation/PrivacyPolicy';
 import TermsConditions from '@screens/Introducation/TermsConditions';
 import ContactUs from '@screens/Introducation/ContactUs';
+import Report from '@screens/Report/Report';
 
 const Main = memo(() => {
   return (
@@ -177,6 +178,23 @@ const Main = memo(() => {
           component={TransactionHistory}
           options={({ navigation }) => ({
             headerTitle: () => <HeaderTitle title={'Transaction History'} />,
+            headerLeft: () => <ButtonHeader />,
+            // headerRight: () => (
+            //   <ButtonHeader
+            //     children={<SvgCalendar />}
+            //     onPress={() => {
+            //       navigation.navigate(ROUTES.Menu);
+            //     }}
+            //   />
+            // ),
+            headerBackground: () => <HeaderBackGround />,
+          })}
+        />
+        <Stack.Screen
+          name={ROUTES.Report}
+          component={Report}
+          options={({ navigation }) => ({
+            headerTitle: () => <HeaderTitle title={'All Report'} />,
             headerLeft: () => <ButtonHeader />,
             // headerRight: () => (
             //   <ButtonHeader

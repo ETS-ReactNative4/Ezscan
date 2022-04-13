@@ -17,6 +17,7 @@ const ROUTES = {
   Height: 'Height',
   MainPage: 'MainPage',
   MyOrder: 'MyOrder',
+  Report: 'Report',
   TransactionHistory: 'TransactionHistory',
   PricePlan: 'PricePlan',
   Menu: 'Menu',
