@@ -100,7 +100,7 @@ const MainPage = memo(({ navigation }) => {
           <ServiceItem
             // onPress={onFindHospital}
             svg={<SvgDoctor />}
-            title={'Dignologist'}
+            title={'Diagnologist'}
             // content={'96 Hospital'}
           />
           <ServiceItem

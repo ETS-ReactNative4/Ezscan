@@ -74,6 +74,7 @@ import PrivacyPolicy from '@screens/Introducation/PrivacyPolicy';
 import TermsConditions from '@screens/Introducation/TermsConditions';
 import ContactUs from '@screens/Introducation/ContactUs';
 import Report from '@screens/Report/Report';
+import DeliveryAddress from '@screens/DeliveryAddress/DeliveryAddress';
 
 const Main = memo(() => {
   return (
@@ -195,6 +196,23 @@ const Main = memo(() => {
           component={Report}
           options={({ navigation }) => ({
             headerTitle: () => <HeaderTitle title={'All Report'} />,
+            headerLeft: () => <ButtonHeader />,
+            // headerRight: () => (
+            //   <ButtonHeader
+            //     children={<SvgCalendar />}
+            //     onPress={() => {
+            //       navigation.navigate(ROUTES.Menu);
+            //     }}
+            //   />
+            // ),
+            headerBackground: () => <HeaderBackGround />,
+          })}
+        />
+        <Stack.Screen
+          name={ROUTES.DeliveryAddress}
+          component={DeliveryAddress}
+          options={({ navigation }) => ({
+            headerTitle: () => <HeaderTitle title={'Delivery Address'} />,
             headerLeft: () => <ButtonHeader />,
             // headerRight: () => (
             //   <ButtonHeader

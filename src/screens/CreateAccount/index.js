@@ -124,7 +124,7 @@ const styles = ScaledSheet.create({
     fontFamily: FONTS.HIND.SemiBold,
     fontWeight: '600',
     fontSize: scaleHeight(12),
-    color: colors.classicBlue,
+    color: colors.white,
     textTransform: 'uppercase',
   },
   skipView: {

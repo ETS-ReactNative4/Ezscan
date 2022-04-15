@@ -60,30 +60,35 @@ const Menu = memo(({ route }) => {
         navigation.navigate(ROUTES.MyOrder);
         setIndex(0);
         break;
-      // case 'Home':
-      //   navigation.navigate(ROUTES.MainPage);
-      //   setIndex(0);
-      //   break;
-      case 'Report':
-        navigation.navigate(ROUTES.Report);
-        setIndex(0);
-        break;
       case 'Transaction History':
         navigation.navigate(ROUTES.TransactionHistory);
         setIndex(1);
         break;
+      case 'Report':
+        navigation.navigate(ROUTES.Report);
+        setIndex(2);
+        break;
+      case 'Delivery Address':
+        navigation.navigate(ROUTES.DeliveryAddress);
+        setIndex(3);
+        break;
       case 'Privacy Policy':
         navigation.navigate(ROUTES.PrivacyPolicy);
-        setIndex(5);
+        setIndex(4);
         break;
       case 'Terms & Conditions':
         navigation.navigate(ROUTES.TermsConditions);
-        setIndex(6);
+        setIndex(5);
         break;
       case 'Contact Us':
         navigation.navigate(ROUTES.ContactUs);
-        setIndex(7);
+        setIndex(6);
         break;
+      // case 'Home':
+      //   navigation.navigate(ROUTES.MainPage);
+      //   setIndex(0);
+      //   break;
+
       // case 'Drugs':
       //   navigation.navigate(ROUTES.Drugs);
       //   setIndex(1);
