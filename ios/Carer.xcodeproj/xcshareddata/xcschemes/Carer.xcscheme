@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "Carer.app"
-               BlueprintName = "Carer"
-               ReferencedContainer = "container:Carer.xcodeproj">
+               BuildableName = "EZheal.app"
+               BlueprintName = "EZheal"
+               ReferencedContainer = "container:EZheal.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "CarerTests.xctest"
-               BlueprintName = "CarerTests"
-               ReferencedContainer = "container:Carer.xcodeproj">
+               BuildableName = "EZhealTests.xctest"
+               BlueprintName = "EZhealTests"
+               ReferencedContainer = "container:EZheal.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "Carer.app"
-            BlueprintName = "Carer"
-            ReferencedContainer = "container:Carer.xcodeproj">
+            BuildableName = "EZheal.app"
+            BlueprintName = "EZheal"
+            ReferencedContainer = "container:EZheal.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "Carer.app"
-            BlueprintName = "Carer"
-            ReferencedContainer = "container:Carer.xcodeproj">
+            BuildableName = "EZheal.app"
+            BlueprintName = "EZheal"
+            ReferencedContainer = "container:EZheal.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

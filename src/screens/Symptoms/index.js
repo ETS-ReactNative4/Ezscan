@@ -96,6 +96,10 @@ const Symptoms = memo(({ navigation }) => {
     navigation.navigate(ROUTES.AppointmentList);
   }, [navigation]);
 
+  const onFindDoctor = useCallback(() => {
+    navigation.navigate(ROUTES.FindDoctors);
+  }, [navigation]);
+
   const renderItem = useCallback(
     ({ item }) => {
       const { Svg, drugName, concentration } = item;
@@ -105,8 +109,9 @@ const Symptoms = memo(({ navigation }) => {
           Svg={Svg}
           drugName={drugName}
           concentration={concentration}
+          onPress={onFindDoctor}
           //   onPress={onDrugDetails}
-          onPress={onAppointment}
+          // onPress={onAppointment}
         />
       );
     },

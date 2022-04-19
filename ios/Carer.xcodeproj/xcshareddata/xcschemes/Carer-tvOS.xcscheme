@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "Carer-tvOS.app"
-               BlueprintName = "Carer-tvOS"
-               ReferencedContainer = "container:Carer.xcodeproj">
+               BuildableName = "EZheal-tvOS.app"
+               BlueprintName = "EZheal-tvOS"
+               ReferencedContainer = "container:EZheal.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "Carer-tvOSTests.xctest"
-               BlueprintName = "Carer-tvOSTests"
-               ReferencedContainer = "container:Carer.xcodeproj">
+               BuildableName = "EZheal-tvOSTests.xctest"
+               BlueprintName = "EZheal-tvOSTests"
+               ReferencedContainer = "container:EZheal.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "Carer-tvOS.app"
-            BlueprintName = "Carer-tvOS"
-            ReferencedContainer = "container:Carer.xcodeproj">
+            BuildableName = "EZheal-tvOS.app"
+            BlueprintName = "EZheal-tvOS"
+            ReferencedContainer = "container:EZheal.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "Carer-tvOS.app"
-            BlueprintName = "Carer-tvOS"
-            ReferencedContainer = "container:Carer.xcodeproj">
+            BuildableName = "EZheal-tvOS.app"
+            BlueprintName = "EZheal-tvOS"
+            ReferencedContainer = "container:EZheal.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -42,8 +42,8 @@ def flipper_post_install(installer)
   end
 end
 
-target 'Carer' do
-  # Pods for Carer
+target 'EZheal' do
+  # Pods for EZheal
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -77,7 +77,7 @@ target 'Carer' do
 
   pod 'RNSVG', :path => '../node_modules/react-native-svg'
 
-  target 'CarerTests' do
+  target 'EZhealTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -100,10 +100,10 @@ target 'Carer' do
   end
 end
 
-target 'Carer-tvOS' do
-  # Pods for Carer-tvOS
+target 'EZheal-tvOS' do
+  # Pods for EZheal-tvOS
 
-  target 'Carer-tvOSTests' do
+  target 'EZheal-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

@@ -97,26 +97,42 @@ const MainPage = memo(({ navigation }) => {
         </ScrollView>
         <View style={styles.flexWrap}>
           <ServiceItem
-            onPress={onFindDoctor}
-            svg={<SvgDoctor />}
+            // onPress={onFindDoctor}
+            onPress={Symptoms}
+            svg={
+              <Image
+                style={styles.imgCategories}
+                source={require('../../assets/MainPage/PinClipart.com_clinic-clip-art_5528442.png')}
+              />
+            }
             title={'Doctor'}
             content={'128 Doctors'}
           />
           <ServiceItem
             // onPress={onFindHospital}
             onPress={Symptoms}
-            svg={<SvgDoctor />}
+            svg={
+              <Image
+                style={styles.imgCategories}
+                source={require('../../assets/MainPage/PinClipart.com_spinal-cord-clipart_5703676.png')}
+              />
+            }
             title={'Diagnostic'}
             content={'96 Diagnostic'}
           />
           <ServiceItem
             // onPress={onAppointment}
-            svg={<SvgDoctor />}
+            svg={
+              <Image
+                style={styles.imgCategories}
+                source={require('../../assets/MainPage/PinClipart.com_xray-clip-art_5462314.png')}
+              />
+            }
             title={'Physiotherapy'}
             content={'05 Physiotherapy'}
           />
           <ServiceItem
-            onPress={onPriceServices}
+            // onPress={onPriceServices}
             // onPress={onAppointment}
             svg={<SvgDoctor />}
             title={'Dietitician'}
@@ -141,6 +157,7 @@ const MainPage = memo(({ navigation }) => {
           <View style={styles.flexWrap}>
             <ServiceItem
               // onPress={onAppointment}
+
               svg={<SvgChat />}
               title={'Chat Bot'}
               // content={'05 doctors'}
@@ -325,5 +342,9 @@ const styles = ScaledSheet.create({
   imgMedical: {
     width: scaleWidth(250),
     height: scaleHeight(150),
+  },
+  imgCategories: {
+    width: 50,
+    height: 50,
   },
 });

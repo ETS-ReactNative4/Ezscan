@@ -665,7 +665,7 @@ const Main = memo(() => {
           name={ROUTES.Symptoms}
           component={Symptoms}
           options={{
-            headerTitle: () => <HeaderTitle title={'Common Symptoms'} />,
+            headerTitle: () => <HeaderTitle title={'Categories'} />,
             headerLeft: () => <ButtonHeader left={true} />,
             headerBackground: () => <HeaderBackGround />,
           }}
