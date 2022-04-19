@@ -30,6 +30,7 @@ const SCREENS = [
   'Transaction History',
   'Report',
   'Delivery Address',
+  'Exercise Videos',
   'Privacy Policy',
   'Terms & Conditions',
   'Contact Us',
@@ -72,17 +73,21 @@ const Menu = memo(({ route }) => {
         navigation.navigate(ROUTES.DeliveryAddress);
         setIndex(3);
         break;
+      case 'Exercise Videos':
+        navigation.navigate(ROUTES.ExerciseVideos);
+        setIndex(4);
+        break;
       case 'Privacy Policy':
         navigation.navigate(ROUTES.PrivacyPolicy);
-        setIndex(4);
+        setIndex(5);
         break;
       case 'Terms & Conditions':
         navigation.navigate(ROUTES.TermsConditions);
-        setIndex(5);
+        setIndex(6);
         break;
       case 'Contact Us':
         navigation.navigate(ROUTES.ContactUs);
-        setIndex(6);
+        setIndex(7);
         break;
       // case 'Home':
       //   navigation.navigate(ROUTES.MainPage);

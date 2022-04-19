@@ -27,6 +27,8 @@ import SvgBlood from '@svgs/Blood/SvgBlood';
 import SvgMedical from '@svgs/MainPage/SvgMedical';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import SvgLocation from '@svgs/MainPage/SvgLocation';
+import ListDrugs from '@screens/ListDrugs';
+import SymptomsList from '@screens/Symptoms/components/SymptomsList';
 const TOPICDATA = [
   {
     color: colors.green,
@@ -54,6 +56,9 @@ const MainPage = memo(({ navigation }) => {
 
   const onFindHospital = useCallback(() => {
     navigation.navigate(ROUTES.FindHospital);
+  }, [navigation]);
+  const Symptoms = useCallback(() => {
+    navigation.navigate(ROUTES.Symptoms);
   }, [navigation]);
 
   const onAppointment = useCallback(() => {
@@ -95,26 +100,27 @@ const MainPage = memo(({ navigation }) => {
             onPress={onFindDoctor}
             svg={<SvgDoctor />}
             title={'Doctor'}
-            // content={'128 Doctors'}
+            content={'128 Doctors'}
           />
           <ServiceItem
             // onPress={onFindHospital}
+            onPress={Symptoms}
             svg={<SvgDoctor />}
-            title={'Diagnologist'}
-            // content={'96 Hospital'}
+            title={'Diagnostic'}
+            content={'96 Diagnostic'}
           />
           <ServiceItem
             // onPress={onAppointment}
             svg={<SvgDoctor />}
             title={'Physiotherapy'}
-            // content={'05 doctors'}
+            content={'05 Physiotherapy'}
           />
           <ServiceItem
             onPress={onPriceServices}
             // onPress={onAppointment}
             svg={<SvgDoctor />}
-            title={'Dietitian'}
-            // content={'05 doctors'}
+            title={'Dietitician'}
+            content={'05 Dietitician'}
           />
 
           {/* <ServiceItem
