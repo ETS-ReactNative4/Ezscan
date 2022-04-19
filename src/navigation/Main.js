@@ -75,6 +75,9 @@ import TermsConditions from '@screens/Introducation/TermsConditions';
 import ContactUs from '@screens/Introducation/ContactUs';
 import Report from '@screens/Report/Report';
 import DeliveryAddress from '@screens/DeliveryAddress/DeliveryAddress';
+import SymptomsList from '@screens/Symptoms/components/SymptomsList';
+import Symptoms from '@screens/Symptoms';
+import ExerciseVideos from '@screens/Exercise/ExerciseVideos';
 
 const Main = memo(() => {
   return (
@@ -162,6 +165,23 @@ const Main = memo(() => {
           component={MyOrder}
           options={({ navigation }) => ({
             headerTitle: () => <HeaderTitle title={'My Order'} />,
+            headerLeft: () => <ButtonHeader />,
+            // headerRight: () => (
+            //   <ButtonHeader
+            //     children={<SvgCalendar />}
+            //     onPress={() => {
+            //       navigation.navigate(ROUTES.Menu);
+            //     }}
+            //   />
+            // ),
+            headerBackground: () => <HeaderBackGround />,
+          })}
+        />
+        <Stack.Screen
+          name={ROUTES.ExerciseVideos}
+          component={ExerciseVideos}
+          options={({ navigation }) => ({
+            headerTitle: () => <HeaderTitle title={'Exercise Videos'} />,
             headerLeft: () => <ButtonHeader />,
             // headerRight: () => (
             //   <ButtonHeader
@@ -637,6 +657,15 @@ const Main = memo(() => {
           component={FindHospital}
           options={{
             headerTitle: () => <HeaderTitle title={'Find Hospital'} />,
+            headerLeft: () => <ButtonHeader left={true} />,
+            headerBackground: () => <HeaderBackGround />,
+          }}
+        />
+        <Stack.Screen
+          name={ROUTES.Symptoms}
+          component={Symptoms}
+          options={{
+            headerTitle: () => <HeaderTitle title={'Common Symptoms'} />,
             headerLeft: () => <ButtonHeader left={true} />,
             headerBackground: () => <HeaderBackGround />,
           }}

@@ -9,6 +9,7 @@ import ButtonHeader from '@components/ButtonHeader';
 import SvgMenu from '@svgs/SvgMenu';
 import HeaderBackGround from '@components/HeaderBackGround';
 import Doctors from '@screens/Doctors';
+import Notification from '@screens/Notification';
 
 const Stack = createStackNavigator();
 
@@ -45,21 +46,23 @@ const MenuStack = memo(() => {
       {...defaultScalingDrawerConfig}>
       <Stack.Navigator>
         <Stack.Screen
-          name={ROUTES.StaticsHealth}
-          component={StaticsHealth}
-          options={({ navigation }) => ({
-            headerTitle: () => <HeaderTitle title={'Test Indicators'} />,
-            headerLeft: () => (
-              <ButtonHeader
-                left={true}
-                children={<SvgMenu />}
-                onPress={() => {
-                  navigation.navigate(ROUTES.Menu);
-                }}
-              />
-            ),
-            headerBackground: () => <HeaderBackGround />,
-          })}
+          name={ROUTES.Notification}
+          component={Notification}
+          // name={ROUTES.StaticsHealth}
+          // component={StaticsHealth}
+          // options={({ navigation }) => ({
+          //   headerTitle: () => <HeaderTitle title={'Test Indicators'} />,
+          //   headerLeft: () => (
+          //     <ButtonHeader
+          //       left={true}
+          //       children={<SvgMenu />}
+          //       onPress={() => {
+          //         navigation.navigate(ROUTES.Menu);
+          //       }}
+          //     />
+          //   ),
+          //   headerBackground: () => <HeaderBackGround />,
+          // })}
         />
         <Stack.Screen
           name={ROUTES.Doctors}

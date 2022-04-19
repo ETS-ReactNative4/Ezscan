@@ -7,13 +7,14 @@ import HeaderBackGround from '@components/HeaderBackGround';
 import SvgSetting from '@svgs/SvgSetting';
 import SvgMenu from '@svgs/SvgMenu';
 import StaticsHealthTab from '@navigation/StaticsHealthTab';
+import Notification from '@screens/Notification';
 
 const Stack = createStackNavigator();
 
 const StaticsHealthStack = memo(() => {
   return (
     <Stack.Navigator screenOptions={{ headerTransparent: true }}>
-      <Stack.Screen
+      {/* <Stack.Screen
         name={ROUTES.StaticsHealth}
         component={StaticsHealthTab}
         options={({ navigation }) => ({
@@ -34,6 +35,11 @@ const StaticsHealthStack = memo(() => {
           ),
           headerBackground: () => <HeaderBackGround />,
         })}
+      /> */}
+      <Stack.Screen
+        name={ROUTES.Notification}
+        component={Notification}
+        options={{ headerShown: false }}
       />
     </Stack.Navigator>
   );

@@ -61,7 +61,7 @@ const SignIn = memo(({ navigation }) => {
         showsVerticalScrollIndicator={false}
         bounces={false}>
         <SvgHeart style={styles.svgHeart} />
-        <Text style={styles.txtWelcome}>Welcome to EZscan</Text>
+        <Text style={styles.txtWelcome}>Welcome to EZheal</Text>
         <TextInputHealer
           inputRef={refInput1}
           svg={<SvgUser />}

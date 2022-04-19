@@ -1,4 +1,4 @@
-package dev.EZscan;
+package dev.EZheal;
 
 import com.facebook.react.ReactActivity;
 

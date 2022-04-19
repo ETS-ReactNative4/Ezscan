@@ -45,7 +45,7 @@ const SignUp = memo(({ navigation }) => {
         <SvgSmallHeart style={styles.svgHeart} color={colors.white} />
         <SvgSignUp style={styles.svg} />
         <View style={[styles.contentView]}>
-          <Text style={styles.txtJoin}>Join to EZscan!</Text>
+          <Text style={styles.txtJoin}>Join to EZheal!</Text>
           {/* <Text style={styles.txtVacation}>Vacation Home Rental Success</Text> */}
           <TextInputHealer
             style={styles.txtInput1}

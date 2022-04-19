@@ -10,6 +10,7 @@ import SvgNotification from '@svgs/SvgNotification';
 import SvgCarer from '@svgs/SvgCarer';
 import colors from '@ultis/colors';
 import SvgEzcan from '@svgs/SvgEzcan';
+import SvgCart from '@svgs/Cart/SvgCart';
 
 const Stack = createStackNavigator();
 
@@ -31,9 +32,9 @@ const MainPageStack = memo(() => {
           ),
           headerRight: () => (
             <ButtonHeader
-              children={<SvgNotification />}
+              children={<SvgCart />}
               onPress={() => {
-                navigation.navigate(ROUTES.Notification);
+                navigation.navigate(ROUTES.Cart);
               }}
             />
           ),
