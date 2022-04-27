@@ -29,6 +29,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import SvgLocation from '@svgs/MainPage/SvgLocation';
 import ListDrugs from '@screens/ListDrugs';
 import SymptomsList from '@screens/Symptoms/components/SymptomsList';
+import ChatBot from '@screens/ChatBot';
 const TOPICDATA = [
   {
     color: colors.green,
@@ -71,6 +72,14 @@ const MainPage = memo(({ navigation }) => {
 
   const Diagnostic = useCallback(() => {
     navigation.navigate(ROUTES.Diagnostic);
+  }, [navigation]);
+
+  const ChatBot = useCallback(() => {
+    navigation.navigate(ROUTES.ChatBot);
+  }, [navigation]);
+
+  const ExerciseVideos = useCallback(() => {
+    navigation.navigate(ROUTES.ExerciseVideos);
   }, [navigation]);
 
   const renderTopicItem = () => {
@@ -168,19 +177,21 @@ const MainPage = memo(({ navigation }) => {
           <View style={styles.flexWrap}>
             <ServiceItem
               // onPress={onAppointment}
-
+              onPress={ChatBot}
               svg={<SvgChat />}
               title={'Chat Bot'}
               // content={'05 doctors'}
             />
             <ServiceItem
               // onPress={onAppointment}
+              onPress={ExerciseVideos}
               svg={<SvgExercise />}
               title={'Exercise Bot'}
               // content={'05 doctors'}
             />
             <ServiceItem
               // onPress={onAppointment}
+              onPress={Symptoms}
               svg={<SvgDiet />}
               title={'Diet Bot'}
               // content={'05 doctors'}

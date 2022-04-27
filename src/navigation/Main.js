@@ -82,6 +82,7 @@ import EditProfile from '@screens/EditProfile/EditProfile';
 import Diagnostic from '@screens/Diagnostic';
 import SvgCart from '@svgs/Cart/SvgCart';
 import BookingStatus from '@screens/AppointmentStutas/BookingStatus';
+import ChatBot from '@screens/ChatBot';
 
 const Main = memo(() => {
   return (
@@ -534,6 +535,14 @@ const Main = memo(() => {
           component={BookAppointment}
           options={{
             headerTitle: () => <HeaderTitle title={'Book Appoinment'} />,
+            headerLeft: () => <ButtonHeader />,
+            headerBackground: () => <HeaderBackGround />,
+          }}
+        />
+        <Stack.Screen
+          name={ROUTES.ChatBot}
+          component={ChatBot}
+          options={{
             headerLeft: () => <ButtonHeader />,
             headerBackground: () => <HeaderBackGround />,
           }}

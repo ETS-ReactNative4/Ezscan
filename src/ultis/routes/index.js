@@ -79,6 +79,7 @@ const ROUTES = {
   Insurance: 'Insurance ',
   BookAppointment: 'BookAppointment',
   Drugs: 'Drugs',
+  ChatBot: 'ChatBot',
   BookingStatus: 'BookingStatus',
   LabBooking: 'LabBooking',
   ListDrugs: 'ListDrugs',
