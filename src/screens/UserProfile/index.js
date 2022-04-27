@@ -29,6 +29,11 @@ import ROUTES from '@ultis/routes';
 import SvgMenu from '@svgs/SvgMenu';
 import SvgAvatar from '@svgs/Menu/SvgAvatar';
 import SvgDoctor from '@svgs/UserProfile/SvgDoctor';
+import SvgHome from '@svgs/Home/SvgHome';
+import DeliveryAddress from '@screens/DeliveryAddress/DeliveryAddress';
+import SignIn from '@screens/SignIn';
+import SvgLogOut from '@svgs/LogOut/SvgLogOut';
+import SvgProfile from '@svgs/EditProfile/SvgProfile';
 
 const USERDATA = {
   userName: 'Virginia Fowler',
@@ -61,6 +66,18 @@ const UserProfile = memo(({ navigation }) => {
 
   const onInsurance = useCallback(() => {
     navigation.navigate(ROUTES.Insurance);
+  }, [navigation]);
+
+  const DeliveryAddress = useCallback(() => {
+    navigation.navigate(ROUTES.DeliveryAddress);
+  }, [navigation]);
+
+  const SignIn = useCallback(() => {
+    navigation.navigate(ROUTES.SignIn);
+  }, [navigation]);
+
+  const EditProfile = useCallback(() => {
+    navigation.navigate(ROUTES.EditProfile);
   }, [navigation]);
 
   return (
@@ -117,21 +134,31 @@ const UserProfile = memo(({ navigation }) => {
           doctorName={notiData.doctorName}
           time={notiData.time}
         />
-        <TopicItem
+        {/* <TopicItem
           Svg={<SvgFire />}
           title={'Goal Settings'}
           onPress={onGoalSettings}
+        /> */}
+        <TopicItem
+          Svg={<SvgProfile color={colors.blue} width={24} height={24} />}
+          title={'Edit Profile'}
+          onPress={EditProfile}
         />
         <TopicItem
-          Svg={<SvgMyHeart color={colors.orange} width={24} height={24} />}
-          title={'Doctor Favorites'}
-          onPress={onDoctorFavorites}
+          Svg={<SvgHome color={colors.orange} width={24} height={24} />}
+          title={'Delivery Address'}
+          onPress={DeliveryAddress}
         />
         <TopicItem
+          Svg={<SvgLogOut color={colors.blue} width={24} height={24} />}
+          title={'Log Out'}
+          onPress={SignIn}
+        />
+        {/* <TopicItem
           Svg={<SvgStar color={colors.orange} width={24} height={24} />}
           title={'Insurance'}
           onPress={onInsurance}
-        />
+        /> */}
       </ScrollView>
     </View>
   );

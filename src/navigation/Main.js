@@ -78,6 +78,10 @@ import DeliveryAddress from '@screens/DeliveryAddress/DeliveryAddress';
 import SymptomsList from '@screens/Symptoms/components/SymptomsList';
 import Symptoms from '@screens/Symptoms';
 import ExerciseVideos from '@screens/Exercise/ExerciseVideos';
+import EditProfile from '@screens/EditProfile/EditProfile';
+import Diagnostic from '@screens/Diagnostic';
+import SvgCart from '@svgs/Cart/SvgCart';
+import BookingStatus from '@screens/AppointmentStutas/BookingStatus';
 
 const Main = memo(() => {
   return (
@@ -395,6 +399,16 @@ const Main = memo(() => {
             headerBackground: () => <HeaderBackGround />,
           })}
         />
+
+        <Stack.Screen
+          name={ROUTES.EditProfile}
+          component={EditProfile}
+          options={({ navigation }) => ({
+            headerTitle: () => <HeaderTitle title={'Edit Profile'} />,
+            headerLeft: () => <ButtonHeader />,
+            headerBackground: () => <HeaderBackGround />,
+          })}
+        />
         <Stack.Screen
           name={ROUTES.IndicatorsSettings}
           component={IndicatorsSettingsTab}
@@ -520,6 +534,15 @@ const Main = memo(() => {
           component={BookAppointment}
           options={{
             headerTitle: () => <HeaderTitle title={'Book Appoinment'} />,
+            headerLeft: () => <ButtonHeader />,
+            headerBackground: () => <HeaderBackGround />,
+          }}
+        />
+        <Stack.Screen
+          name={ROUTES.BookingStatus}
+          component={BookingStatus}
+          options={{
+            headerTitle: () => <HeaderTitle title={'Booking Status'} />,
             headerLeft: () => <ButtonHeader />,
             headerBackground: () => <HeaderBackGround />,
           }}
@@ -669,6 +692,23 @@ const Main = memo(() => {
             headerLeft: () => <ButtonHeader left={true} />,
             headerBackground: () => <HeaderBackGround />,
           }}
+        />
+        <Stack.Screen
+          name={ROUTES.Diagnostic}
+          component={Diagnostic}
+          options={({ navigation }) => ({
+            headerTitle: () => <HeaderTitle title={'Diagnostic'} />,
+            headerLeft: () => <ButtonHeader left={true} />,
+            headerRight: () => (
+              <ButtonHeader
+                children={<SvgCart />}
+                onPress={() => {
+                  navigation.navigate(ROUTES.Cart);
+                }}
+              />
+            ),
+            headerBackground: () => <HeaderBackGround />,
+          })}
         />
         <Stack.Screen
           name={ROUTES.MainBottomTab}

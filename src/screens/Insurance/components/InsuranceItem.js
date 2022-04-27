@@ -10,13 +10,24 @@ interface Props {
   logoHospital?: any;
   insurance?: string;
   name?: string;
+  addresh?: string;
+  price?: string;
   enrolleeID?: string;
   expDate?: string;
   onPress?: any;
 }
 
 const InsuranceItem = memo((props: Props) => {
-  const { logoHospital, insurance, name, enrolleeID, expDate, onPress } = props;
+  const {
+    logoHospital,
+    insurance,
+    name,
+    addresh,
+    price,
+    enrolleeID,
+    expDate,
+    onPress,
+  } = props;
   return (
     <View style={styles.container}>
       <View style={styles.topView}>
@@ -24,13 +35,15 @@ const InsuranceItem = memo((props: Props) => {
         <Text style={styles.txtInsurance}>{insurance}</Text>
       </View>
       <Text style={styles.txtName}>{name}</Text>
+      <Text style={styles.txtprice}>{price}</Text>
+      <Text style={styles.txtAddresh}>{addresh}</Text>
       <View style={styles.btmView}>
         <View>
-          <Text style={styles.enrolleeID}>Enrollee ID</Text>
+          <Text style={styles.enrolleeID}>Order ID</Text>
           <Text style={styles.txtEnrolleeID}>{enrolleeID}</Text>
         </View>
         <View>
-          <Text style={styles.expDate}>Exp Date</Text>
+          <Text style={styles.expDate}>Date</Text>
           <Text style={styles.txtExpDate}>{expDate}</Text>
         </View>
       </View>
@@ -72,7 +85,20 @@ const styles = ScaledSheet.create({
     fontSize: scaleHeight(32),
     lineHeight: scaleHeight(48),
     color: colors.semiBlack,
-    marginBottom: scaleHeight(22),
+    marginBottom: scaleHeight(10),
+    textAlign: 'center',
+  },
+  txtprice: {
+    textAlign: 'center',
+    fontSize: scaleHeight(32),
+    fontFamily: FONTS.HIND.Regular,
+  },
+  txtAddresh: {
+    fontFamily: FONTS.HIND.Regular,
+    fontSize: scaleHeight(20),
+    lineHeight: scaleHeight(30),
+    color: colors.semiBlack,
+    marginBottom: scaleHeight(10),
     textAlign: 'center',
   },
   btmView: {

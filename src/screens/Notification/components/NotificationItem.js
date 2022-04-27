@@ -32,17 +32,17 @@ const NotificationItem = (props: PropsNotificationItem) => {
         {name} <Text style={styles.des}>{des}</Text>
       </Text>
       <Text style={styles.time}>{time}</Text>
-      {follow && (
+      {/* {follow && (
         <TouchableOpacity style={styles.btnFlow}>
           <Text style={styles.txtFlow}>follow</Text>
         </TouchableOpacity>
-      )}
-      {reply && (
+      )} */}
+      {/* {reply && (
         <TouchableOpacity style={styles.btnFlow}>
           <Text style={styles.txtReply}>reply</Text>
         </TouchableOpacity>
       )}
-      {active && <SvgActive style={styles.svgActive} />}
+      {active && <SvgActive style={styles.svgActive} />} */}
     </TouchableOpacity>
   );
 };

@@ -12,10 +12,11 @@ interface Props {
   imgDrug?: any;
   drugName?: string;
   drugPrice?: number;
+  svgAdd?: any;
 }
 
 const CartItem = memo((props: Props) => {
-  const { imgDrug, drugName, drugPrice } = props;
+  const { imgDrug, drugName, drugPrice, svgAdd } = props;
   const [count, setCount] = useState(0);
   const { total, setTotal } = useContext(TotalContext);
 
@@ -35,7 +36,10 @@ const CartItem = memo((props: Props) => {
   return (
     <View style={styles.container}>
       <Image style={styles.imgDrug} source={imgDrug} />
-      <Text style={styles.txtDrugName}>{drugName}</Text>
+      <View style={{ flexDirection: 'row' }}>
+        <Text style={styles.txtDrugName}>{drugName}</Text>
+        <Text style={styles.txtDrugName1}>{svgAdd}</Text>
+      </View>
       <Text style={styles.txtDrugPrice}>${drugPrice}.00</Text>
       <View style={styles.btnView}>
         <TouchableOpacity
@@ -130,5 +134,8 @@ const styles = ScaledSheet.create({
     color: colors.semiBlack,
     marginRight: scaleWidth(30),
     height: scaleHeight(50),
+  },
+  txtDrugName1: {
+    marginTop: scaleHeight(8),
   },
 });

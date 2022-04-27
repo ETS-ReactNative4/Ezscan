@@ -16,7 +16,10 @@ import MainPageStack from '@navigation/MainPageStack';
 import { ScaledSheet } from 'react-native-size-matters';
 import DrugsStack from '@navigation/DrugsStack';
 import { getBottomSpace } from 'react-native-iphone-x-helper';
-
+import SvgLab from '@svgs/MainBottomTab/SvgLab';
+import SvgBotamNotification from '@svgs/MainBottomTab/SvgBotamNotification';
+import LabBooking from '@screens/LabBooking';
+import LabBookingStack from './LabBookingStack';
 const Tab = createBottomTabNavigator();
 
 const MainBottomTab = memo(() => {
@@ -33,7 +36,7 @@ const MainBottomTab = memo(() => {
         name={ROUTES.StaticsHealth}
         component={StaticsHealthStack}
         options={{
-          tabBarIcon: ({ color }) => <SvgIndicatorInactive color={color} />,
+          tabBarIcon: ({ color }) => <SvgBotamNotification color={color} />,
         }}
       />
       <Tab.Screen
@@ -55,10 +58,10 @@ const MainBottomTab = memo(() => {
         }}
       />
       <Tab.Screen
-        name={ROUTES.Drugs}
-        component={DrugsStack}
+        name={ROUTES.LabBooking}
+        component={LabBookingStack}
         options={{
-          tabBarIcon: ({ color }) => <SvgDrugInactive color={color} />,
+          tabBarIcon: ({ color }) => <SvgLab color={color} />,
         }}
       />
       <Tab.Screen

@@ -10,6 +10,7 @@ import FONTS from '@ultis/fonts';
 import { widthScreen } from '@ultis/dimensions';
 import ButtonPrimary from '@components/ButtonPrimary';
 import ROUTES from '@ultis/routes';
+import SvgAdd from '@svgs/SvgAdd';
 
 const CARTDATA = [
   {
@@ -18,24 +19,9 @@ const CARTDATA = [
     drugPrice: 29,
   },
   {
-    imgDrug: require('@assets/Cart/Drug.png'),
-    drugName: 'Acetaminophen and Hydrocodone',
-    drugPrice: 29,
-  },
-  {
-    imgDrug: require('@assets/Cart/Drug.png'),
-    drugName: 'Buprenorphine and Naloxone',
-    drugPrice: 29,
-  },
-  {
-    imgDrug: require('@assets/Cart/Drug.png'),
-    drugName: 'Calcium carbonate',
-    drugPrice: 29,
-  },
-  {
-    imgDrug: require('@assets/Cart/Drug.png'),
-    drugName: 'Divalproex sodium',
-    drugPrice: 29,
+    imgDrug: require('@assets/CreateAccount/avatar.png'),
+    drugName: 'COVID RT-PCR',
+    drugPrice: 500,
   },
 ];
 
@@ -53,10 +39,15 @@ const Cart = memo(({ navigation }) => {
   }, [navigation]);
 
   const renderItem = useCallback(({ item }) => {
-    const { imgDrug, drugName, drugPrice } = item;
+    const { imgDrug, drugName, drugPrice, svgAdd } = item;
 
     return (
-      <CartItem imgDrug={imgDrug} drugName={drugName} drugPrice={drugPrice} />
+      <CartItem
+        imgDrug={imgDrug}
+        svgAdd={svgAdd}
+        drugName={drugName}
+        drugPrice={drugPrice}
+      />
     );
   }, []);
 

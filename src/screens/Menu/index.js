@@ -19,7 +19,7 @@ import SvgFakeScreens from '@svgs/Menu/SvgFakeScreens';
 import SvgAvatar from '@svgs/Menu/SvgAvatar';
 
 const SCREENS = [
-  // 'Home',
+  'Home',
   // 'Drugs',
   // 'Doctors',
   // 'Services',
@@ -29,7 +29,6 @@ const SCREENS = [
   'My Order',
   'Transaction History',
   'Report',
-  'Delivery Address',
   'Exercise Videos',
   'Privacy Policy',
   'Terms & Conditions',
@@ -57,42 +56,42 @@ const Menu = memo(({ route }) => {
 
   const onNavigate = (key) => {
     switch (key) {
+      case 'Home':
+        navigation.navigate(ROUTES.MainPage);
+        setIndex(0);
+        break;
       case 'My Order':
         navigation.navigate(ROUTES.MyOrder);
-        setIndex(0);
+        setIndex(1);
         break;
       case 'Transaction History':
         navigation.navigate(ROUTES.TransactionHistory);
-        setIndex(1);
+        setIndex(2);
         break;
       case 'Report':
         navigation.navigate(ROUTES.Report);
-        setIndex(2);
-        break;
-      case 'Delivery Address':
-        navigation.navigate(ROUTES.DeliveryAddress);
         setIndex(3);
         break;
+      // case 'Delivery Address':
+      //   navigation.navigate(ROUTES.DeliveryAddress);
+      //   setIndex(4);
+      //   break;
       case 'Exercise Videos':
         navigation.navigate(ROUTES.ExerciseVideos);
-        setIndex(4);
+        setIndex(5);
         break;
       case 'Privacy Policy':
         navigation.navigate(ROUTES.PrivacyPolicy);
-        setIndex(5);
+        setIndex(6);
         break;
       case 'Terms & Conditions':
         navigation.navigate(ROUTES.TermsConditions);
-        setIndex(6);
+        setIndex(7);
         break;
       case 'Contact Us':
         navigation.navigate(ROUTES.ContactUs);
-        setIndex(7);
+        setIndex(8);
         break;
-      // case 'Home':
-      //   navigation.navigate(ROUTES.MainPage);
-      //   setIndex(0);
-      //   break;
 
       // case 'Drugs':
       //   navigation.navigate(ROUTES.Drugs);

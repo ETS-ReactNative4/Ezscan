@@ -13,6 +13,7 @@ import ButtonPrimary from '@components/ButtonPrimary';
 import TimeBookItem from '@screens/BookAppointment/Components/TimeBookItem';
 import SvgDoctorImg from '@svgs/BookAppointment/SvgDoctorImg';
 import { getBottomSpace } from 'react-native-iphone-x-helper';
+import BookingStatus from '@screens/AppointmentStutas/BookingStatus';
 
 const DATA = {
   imgDoctor: require('@assets/BookAppointment/Doctor.png'),
@@ -38,6 +39,10 @@ const BookAppointment = memo(({ navigation }) => {
 
   const onMessage = useCallback(() => {
     navigation.navigate(ROUTES.DoctorMessage);
+  }, [navigation]);
+
+  const BookingStatus = useCallback(() => {
+    navigation.navigate(ROUTES.BookingStatus);
   }, [navigation]);
 
   const onBookNow = useCallback(() => {}, []);
@@ -162,7 +167,7 @@ const BookAppointment = memo(({ navigation }) => {
       </View>
       <ButtonPrimary
         style={styles.buttonPrimary}
-        onPress={onBookNow}
+        onPress={BookingStatus}
         title={'Book Now'}
       />
     </ScrollView>
