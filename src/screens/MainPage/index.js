@@ -30,6 +30,7 @@ import SvgLocation from '@svgs/MainPage/SvgLocation';
 import ListDrugs from '@screens/ListDrugs';
 import SymptomsList from '@screens/Symptoms/components/SymptomsList';
 import ChatBot from '@screens/ChatBot';
+import GroupChat from '@screens/SocialBot';
 const TOPICDATA = [
   {
     color: colors.green,
@@ -76,6 +77,10 @@ const MainPage = memo(({ navigation }) => {
 
   const ChatBot = useCallback(() => {
     navigation.navigate(ROUTES.ChatBot);
+  }, [navigation]);
+
+  const GroupChat = useCallback(() => {
+    navigation.navigate(ROUTES.GroupChat);
   }, [navigation]);
 
   const ExerciseVideos = useCallback(() => {
@@ -198,6 +203,7 @@ const MainPage = memo(({ navigation }) => {
             />
             <ServiceItem
               // onPress={onAppointment}
+              onPress={GroupChat}
               svg={<SvgSocial />}
               title={'Social Bot'}
               // content={'05 doctors'}

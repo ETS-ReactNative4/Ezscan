@@ -80,6 +80,7 @@ const ROUTES = {
   BookAppointment: 'BookAppointment',
   Drugs: 'Drugs',
   ChatBot: 'ChatBot',
+  GroupChat: 'GroupChat',
   BookingStatus: 'BookingStatus',
   LabBooking: 'LabBooking',
   ListDrugs: 'ListDrugs',

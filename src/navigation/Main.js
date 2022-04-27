@@ -83,6 +83,7 @@ import Diagnostic from '@screens/Diagnostic';
 import SvgCart from '@svgs/Cart/SvgCart';
 import BookingStatus from '@screens/AppointmentStutas/BookingStatus';
 import ChatBot from '@screens/ChatBot';
+import GroupChat from '@screens/SocialBot';
 
 const Main = memo(() => {
   return (
@@ -543,6 +544,15 @@ const Main = memo(() => {
           name={ROUTES.ChatBot}
           component={ChatBot}
           options={{
+            headerLeft: () => <ButtonHeader />,
+            headerBackground: () => <HeaderBackGround />,
+          }}
+        />
+        <Stack.Screen
+          name={ROUTES.GroupChat}
+          component={GroupChat}
+          options={{
+            headerTitle: () => <HeaderTitle title={'Group Chat'} />,
             headerLeft: () => <ButtonHeader />,
             headerBackground: () => <HeaderBackGround />,
           }}
