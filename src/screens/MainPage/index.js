@@ -69,6 +69,10 @@ const MainPage = memo(({ navigation }) => {
     navigation.navigate(ROUTES.PricePlan);
   }, [navigation]);
 
+  const Diagnostic = useCallback(() => {
+    navigation.navigate(ROUTES.Diagnostic);
+  }, [navigation]);
+
   const renderTopicItem = () => {
     return topicData.map((item, index) => {
       const { color, svg, title } = item;
@@ -110,7 +114,7 @@ const MainPage = memo(({ navigation }) => {
           />
           <ServiceItem
             // onPress={onFindHospital}
-            onPress={Symptoms}
+            onPress={Diagnostic}
             svg={
               <Image
                 style={styles.imgCategories}
@@ -122,6 +126,7 @@ const MainPage = memo(({ navigation }) => {
           />
           <ServiceItem
             // onPress={onAppointment}
+            onPress={Symptoms}
             svg={
               <Image
                 style={styles.imgCategories}
@@ -134,7 +139,13 @@ const MainPage = memo(({ navigation }) => {
           <ServiceItem
             // onPress={onPriceServices}
             // onPress={onAppointment}
-            svg={<SvgDoctor />}
+            onPress={Symptoms}
+            svg={
+              <Image
+                style={styles.imgCategories}
+                source={require('../../assets/MainPage/depositphotos.jpg')}
+              />
+            }
             title={'Dietitician'}
             content={'05 Dietitician'}
           />
@@ -195,7 +206,7 @@ const MainPage = memo(({ navigation }) => {
           </View>
         </View>
         <View>
-          <Text style={styles.patient1}>Medical</Text>
+          <Text style={styles.patient1}>Medical Shop</Text>
           <View style={styles.flexWrap2}>
             <ScrollView horizontal={true}>
               <TouchableOpacity>
@@ -344,7 +355,7 @@ const styles = ScaledSheet.create({
     height: scaleHeight(150),
   },
   imgCategories: {
-    width: 50,
-    height: 50,
+    width: 60,
+    height: 59,
   },
 });
