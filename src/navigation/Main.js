@@ -729,7 +729,7 @@ const Main = memo(() => {
             headerBackground: () => <HeaderBackGround />,
           })}
         />
-        <Stack.Screen
+        <Stack.Screen-
           name={ROUTES.MainBottomTab}
           component={MainBottomTab}
           options={{ headerShown: false }}
